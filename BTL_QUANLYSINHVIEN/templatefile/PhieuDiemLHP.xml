@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<!--header-->
+	<topvalue id="uniname">
+    <row>1</row>
+    <col>A</col>
+    <type>string</type>
+    <valuetype>para</valuetype>
+    <sourcetable>none</sourcetable>
+    <source>uniname</source>
+    <formula>none</formula>
+    <format>none</format>
+    <note>Tên của trường</note>
+    <default>HỌC VIỆN KỸ THUẬT QUÂN SỰ</default>
+  </topvalue>
+	<topvalue id="classtitle">
+    <row>2</row>
+    <col>D</col>
+    <type>string</type>
+    <valuetype>replace</valuetype>
+    <sourcetable>none</sourcetable>
+    <source>{%classcode%}</source>
+    <formula>none</formula>
+    <format>none</format>
+    <note>Mã LHP</note>
+    <default></default>
+  </topvalue>
+	<topvalue id="gradeyear">
+    <row>3</row>
+    <col>D</col>
+    <type>string</type>
+    <valuetype>replace</valuetype>
+    <sourcetable>none</sourcetable>
+    <source>{%year%}</source>
+    <formula>none</formula>
+    <format>none</format>
+    <note>Năm học</note>
+    <default></default>
+  </topvalue>
+
+	<topvalue id="subject">
+    <row>4</row>
+    <col>D</col>
+    <type>string</type>
+    <valuetype>replace</valuetype>
+    <sourcetable>none</sourcetable>
+    <source>{%subject%}</source>
+    <formula>none</formula>
+    <format>none</format>
+    <note>Môn học</note>
+    <default></default>
+  </topvalue>
+	<topvalue id="teacher">
+    <row>5</row>
+    <col>D</col>
+    <type>string</type>
+    <valuetype>replace</valuetype>
+    <sourcetable>none</sourcetable>
+    <source>{%nameteacher%}</source>
+    <formula>none</formula>
+    <format>none</format>
+    <note>Giáo viên</note>
+    <default></default>
+  </topvalue>
+	<loop id="allstudents">
+    <row>9</row>
+    <sourcetable>allstudents</sourcetable>
+    <looptype>all</looptype>
+    <name>allstudents</name>
+    <note>Thông tin sinh viên</note>
+  </loop>
+	<!--header end-->
+	<!--all row-->
+	<allstudents id="order">
+    <col>A</col>
+    <type>Number</type>
+    <valuetype>count</valuetype>
+    <source>countstudent</source>
+    <note>Số thứ tự của sinh viên</note>
+  </allstudents>
+	<allstudents id="studentcode">
+    <col>B</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>MaSV</source>
+    <note>Mã sinh viên</note>
+  </allstudents>
+	<allstudents id="studentname">
+    <col>C</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>TenSV</source>
+    <note>Tên sinh viên</note>
+  </allstudents>
+	<allstudents id="birthday">
+    <col>D</col>
+    <type>date</type>
+    <valuetype>table</valuetype>
+    <source>NgaySinh</source>
+    <note>Ngày sinh</note>
+  </allstudents>
+	<allstudents id="regularpoint">
+    <col>E</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>DiemChuyenCan</source>
+    <note>Điểm thường xuyên</note>
+  </allstudents>
+	<allstudents id="processpoint">
+    <col>F</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>DiemQuaTrinh</source>
+    <note>Điểm quá trình</note>
+  </allstudents>
+    <allstudents id="point">
+    <col>G</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>DiemThi</source>
+    <note>Điểm thi</note>
+  </allstudents>
+    <allstudents id="avgpoint">
+    <col>H</col>
+    <type>string</type>
+    <valuetype>table</valuetype>
+    <source>DiemTB</source>
+    <note>Điểm trung bình</note>
+	</allstudents>
+	<!--all row end-->
+	<updatecolumn id="last">
+    <from>10</from>
+    <end>all</end>
+    <baseon>countstudent</baseon>
+	</updatecolumn>
+</root>
