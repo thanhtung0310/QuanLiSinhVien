@@ -26,12 +26,12 @@ namespace BTL_QUANLYSINHVIEN
         {
             string sub1 = s.Substring(0, 2);
             string sub2 = s.Substring(2).Trim();
-            int ma = Convert.ToInt32(sub2) + 1;
+            int Ma = Convert.ToInt32(sub2) + 1;
             string sub = "";
             //chèn thêm các kí tự 0 vào mã
-            for (int i = 0; i < sub2.Length - ma.ToString().Length; i++)
+            for (int i = 0; i < sub2.Length - Ma.ToString().Length; i++)
                 sub += "0";
-            sub += ma.ToString();
+            sub += Ma.ToString();
             sub1 += sub;
             //
             return sub1;
