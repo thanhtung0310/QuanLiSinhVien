@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>..\..\SinhVien_BTL\SinhVien_BTL\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.BonusSkins.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.2" />
     <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -248,6 +245,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{0e2d70f2-ba8d-432f-9526-99615f26a229}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{a563a21a-9bfb-46f7-a7df-ce994db2c8d7}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{82185709-74f8-4a96-ad03-15eff03ddfb8}</Project>
